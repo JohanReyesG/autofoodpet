@@ -1,0 +1,32 @@
+.aside {}
+
+.aside__nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.aside__nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aside__nav__list__item__button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    background-color: #0291c7;
+    color: #07111c;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.aside__nav__list__item__button:hover {
+    background-color: #07111c;
+    color: #fff;
+}

@@ -1,0 +1,10 @@
+.main {
+    padding: 0 120px;
+    margin-top: 60px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 100%;
+}

@@ -1,0 +1,44 @@
+.section {
+    margin: 95px 0;
+}
+
+.sessions ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    color: #4f4f4f;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin-top: 0.4rem;
+}
+
+.time {
+    color: #2a2839;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.sessions li {
+    padding-bottom: 1.5rem;
+    border-left: 1px solid #abaaed;
+    position: relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.sessions li::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #f9b33f;
+    border: 1px solid #07111c;
+    box-shadow: 3px 3px 0px #017eaf;
+    box-shadow: 3px 3px 0px #017eaf;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+}

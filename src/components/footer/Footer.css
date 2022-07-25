@@ -1,0 +1,24 @@
+.footer--pin {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+footer {
+    padding: 0 120px;
+    background-color: #c22634;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: #fff;
+    font-size: 2em;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 12px;
+    font-weight: 500;
+}

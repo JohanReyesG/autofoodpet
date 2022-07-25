@@ -1,0 +1,21 @@
+.header {
+    padding: 0 120px;
+    background: #07111c;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header img {
+    width: 80px;
+}
+
+.header span {
+    color: #fff;
+    font-size: 2em;
+    margin-left: 20px;
+    margin-top: auto;
+    font-weight: 400;
+}
