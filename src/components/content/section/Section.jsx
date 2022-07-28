@@ -1,30 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './Section.css';
-const data = [
-  {
-    date: '25-07-2022 07:00 AM',
-    title: 'comida dispensada, restante: 1900gr',
-  },
+const Section = () => {
 
-  {
-    date: '25-07-2022 12:00 PM',
-    title: 'comida dispensada, restante: 1000gr',
-  }, {
-    date: '25-07-2022 05:00 PM',
-    title: 'comida dispensada, restante: 200gr',
-  },
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get('https://autofoodpet-default-rtdb.firebaseio.com/historicoDispensacion.json')
+      .then(res => {
+        setData([...data ,res.data]);
+      })
+      .catch(err => console.log(err));
+  }
+    , []);
+  return (  
+    <div className='section'>
+      <ul class="sessions">
+        {data.map(item => (
+          <li>
+            <div class="time">{item.fechaHora}</div>
+            <p>Se dispensaron {item.gramosDispensados} gramos</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
-]
-const Section = () => (
-  <div className='section'>
-    <ul class="sessions">
-      {data.map(item => (
-        <li>
-          <div class="time">{item.date}</div>
-          <p>{item.title}</p>
-        </li>
-      ))}
-    </ul>
-  </div>
-)
 export default Section;
